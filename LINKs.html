@@ -6,122 +6,98 @@
 <title>Link Buttons</title>
 
 <style>
-:root {
-  font-size: 16px;
-  font-family: 'Ubuntu', sans-serif;
-}
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  background: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
 }
 
 .link-icons {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-  column-gap: 50px;
-  row-gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 12px;
 }
 
-.c-button {
-  color: #3399CC;
-  font-weight: 700;
-  font-size: 1em;
-  text-decoration: none;
 
-  padding: .8em 3em;
+/* ボタン */
 
-  cursor: pointer;
+.button-40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    width: 200px;
+    margin: 0 auto;
 
-  vertical-align: middle;
+    padding: .9em 2em;
 
-  border: 2px solid #3399CC;
+    border: none;
+    border-radius: 5px;
 
-  /* 長円ではなく角丸に変更 */
-  border-radius: 10px;
+    box-shadow: 0 7px 10px rgb(0 0 0 / 10%);
 
-  position: relative;
-  overflow: hidden;
+    background-color: #fff;
+    color: #666;
 
-  transition: all 700ms ease;
+    font-size: 1em;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+    transition:
+        transform .3s,
+        box-shadow .3s;
 }
 
-.c-button__text {
-  position: relative;
-  z-index: 1;
+
+/* マウスオン */
+
+.button-40:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 10px rgb(0 0 0 / 15%);
 }
 
-.c-button__blobs {
-  height: 100%;
 
-  filter: url(#goo);
+/* 右矢印 */
 
-  overflow: hidden;
+.button-40::after {
+    transform: rotate(45deg);
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: -3px;
-  right: -1px;
+    width: 5px;
+    height: 5px;
 
-  z-index: 0;
+    margin-left: 10px;
 
-  /* ボタンの角丸に合わせる */
-  border-radius: 8px;
-}
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
 
-.c-button__blobs div {
-  background-color: #3399CC;
-
-  width: 34%;
-  height: 100%;
-
-  border-radius: 100%;
-
-  position: absolute;
-
-  transform: scale(1.4) translateY(125%) translateZ(0);
-
-  transition: all 700ms ease;
-}
-
-.c-button__blobs div:nth-child(1) {
-  left: -5%;
-}
-
-.c-button__blobs div:nth-child(2) {
-  left: 30%;
-  transition-delay: 60ms;
-}
-
-.c-button__blobs div:nth-child(3) {
-  left: 66%;
-  transition-delay: 25ms;
-}
-
-.c-button:hover {
-  color: #fff;
-}
-
-.c-button:hover .c-button__blobs div {
-  transform: scale(1.4) translateY(0) translateZ(0);
+    content: '';
 }
 
 
 /* スマートフォン */
+
 @media (max-width: 600px) {
-  .link-icons {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
+
+    .link-icons {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .button-40 {
+        width: 250px;
+    }
+
 }
+
 </style>
 
 </head>
@@ -130,112 +106,52 @@ body {
 
 <div class="link-icons">
 
-  <!-- X -->
-  <a
-    href="https://twitter.com/halfgreen208"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="c-button"
-  >
-    <span class="c-button__text">X</span>
 
-    <div class="c-button__blobs">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </a>
+    <!-- X -->
+    <a
+        href="https://twitter.com/halfgreen208"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button-40"
+    >
+        X
+    </a>
 
 
-  <!-- YouTube -->
-  <a
-    href="https://youtube.com/channel/UCQQYet3vHfXFBD6vd1yIyww?si=gJJ3OEkaKeOpmWtr"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="c-button"
-  >
-    <span class="c-button__text">YouTube</span>
-
-    <div class="c-button__blobs">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </a>
+    <!-- YouTube -->
+    <a
+        href="https://youtube.com/channel/UCQQYet3vHfXFBD6vd1yIyww?si=gJJ3OEkaKeOpmWtr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button-40"
+    >
+        YouTube
+    </a>
 
 
-  <!-- Amazon -->
-  <a
-    href="https://www.amazon.jp/hz/wishlist/ls/23D9O8EPUDH2V?ref_=wl_share"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="c-button"
-  >
-    <span class="c-button__text">Amazon</span>
-
-    <div class="c-button__blobs">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </a>
+    <!-- Amazon -->
+    <a
+        href="https://www.amazon.jp/hz/wishlist/ls/23D9O8EPUDH2V?ref_=wl_share"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button-40"
+    >
+        Amazon
+    </a>
 
 
-  <!-- fusetter -->
-  <a
-    href="https://fusetter.com/u/halfgreen208"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="c-button"
-  >
-    <span class="c-button__text">fusetter</span>
+    <!-- fusetter -->
+    <a
+        href="https://fusetter.com/u/halfgreen208"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button-40"
+    >
+        fusetter
+    </a>
 
-    <div class="c-button__blobs">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </a>
 
 </div>
-
-
-<!-- Gooey Effect -->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
-  style="position:absolute;width:0;height:0;"
->
-  <defs>
-
-    <filter id="goo">
-
-      <feGaussianBlur
-        in="SourceGraphic"
-        stdDeviation="10"
-        result="blur">
-      </feGaussianBlur>
-
-      <feColorMatrix
-        in="blur"
-        mode="matrix"
-        values="
-          1 0 0 0 0
-          0 1 0 0 0
-          0 0 1 0 0
-          0 0 0 18 -7
-        "
-        result="goo">
-      </feColorMatrix>
-
-      <feBlend
-        in="SourceGraphic"
-        in2="goo">
-      </feBlend>
-
-    </filter>
-  </defs>
-</svg>
 
 </body>
 </html>
