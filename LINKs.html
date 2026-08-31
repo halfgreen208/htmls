@@ -2,133 +2,82 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Link Buttons</title>
 
 <style>
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-}
-
 .link-icons {
     display: grid;
     grid-template-columns: repeat(2, max-content);
-    justify-content: center;
-    column-gap: 50px;
-    row-gap: 12px;
+    column-gap: 50px; /* 左右の間隔 */
+    row-gap: 12px;    /* 上下の間隔 */
 }
 
+.link-icons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
 
-/* ボタン */
+    text-decoration: none;
+    color: #3399CC;
+    font-family: monospace;
+    font-size: 16px;
+    transition: .2s;
+}
 
-.button-36 {
+/* 丸アイコン */
+.link-icons a .icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #3399CC;
+    border-radius: 50%;
+    background: #fff;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 180px;
-    margin: 0 auto;
+    font-size: 15px;
+    font-weight: bold;
 
-    padding: .8em 3em;
-
-    border: 1.5px solid #3399cc;
-    border-radius: 5px;
-
-    background-color: #fff;
-    color: #3399cc;
-
-    font-size: 1em;
-    font-weight: 500;
-
-    text-decoration: none;
-
-    box-sizing: border-box;
+    transition: .2s;
 }
 
-
-/* マウスオン */
-
-.button-36:hover {
-    border: none;
-
-    background-color: #3399cc;
-    color: #fff;
-
-    font-weight: 600;
+/* ホバー */
+.link-icons a:hover {
+    color: #66CCFF;
 }
 
-
-/* スマートフォン */
-
-@media (max-width: 600px) {
-
-    .link-icons {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .button-36 {
-        width: 250px;
-    }
-
+.link-icons a:hover .icon {
+    background: #3399CC;
+    color: #FFFFFF;
+    transform: translateY(-2px);
 }
-
 </style>
-
 </head>
 
 <body>
 
 <div class="link-icons">
 
-
-    <!-- X -->
-    <a
-        href="https://twitter.com/halfgreen208"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button-36"
-    >
-        X
+    <a href="https://twitter.com/halfgreen208" target="_blank">
+        <span class="icon">𝕏</span>
+        <span>X</span>
     </a>
 
-
-    <!-- YouTube -->
-    <a
-        href="https://youtube.com/channel/UCQQYet3vHfXFBD6vd1yIyww?si=gJJ3OEkaKeOpmWtr"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button-36"
-    >
-        YouTube
+    <a href="https://youtube.com/channel/UCQQYet3vHfXFBD6vd1yIyww?si=gJJ3OEkaKeOpmWtr" target="_blank">
+        <span class="icon">▶</span>
+        <span>YouTube</span>
     </a>
 
-
-    <!-- Amazon -->
-    <a
-        href="https://www.amazon.jp/hz/wishlist/ls/23D9O8EPUDH2V?ref_=wl_share"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button-36"
-    >
-        Amazon
+    <a href="https://www.amazon.jp/hz/wishlist/ls/23D9O8EPUDH2V?ref_=wl_share" target="_blank">
+        <span class="icon">A</span>
+        <span>Amazon</span>
     </a>
 
-
-    <!-- fusetter -->
-    <a
-        href="https://fusetter.com/u/halfgreen208"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button-36"
-    >
-        fusetter
+    <a href="https://fusetter.com/u/halfgreen208" target="_blank">
+        <span class="icon">F</span>
+        <span>fusetter</span>
     </a>
-
 
 </div>
 
