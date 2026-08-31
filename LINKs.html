@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Link Buttons</title>
+
+<style>
+.link-icons {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 50px; /* 左右の間隔 */
+    row-gap: 12px;    /* 上下の間隔 */
+}
+
+.link-icons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: #3399CC;
+    font-family: monospace;
+    font-size: 16px;
+    transition: .2s;
+}
+
+/* 丸アイコン */
+.link-icons a .icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #3399CC;
+    border-radius: 50%;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+/* ホバー */
+.link-icons a:hover {
+    color: #66CCFF;
+}
+
+.link-icons a:hover .icon {
+    background: #3399CC;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="link-icons">
+
+    <a href="https://twitter.com/halfgreen208" target="_blank">
+        <span class="icon">𝕏</span>
+        <span>X</span>
+    </a>
+
+    <a href="https://youtube.com/channel/UCQQYet3vHfXFBD6vd1yIyww?si=gJJ3OEkaKeOpmWtr" target="_blank">
+        <span class="icon">▶</span>
+        <span>YouTube</span>
+    </a>
+
+    <a href="https://www.amazon.jp/hz/wishlist/ls/23D9O8EPUDH2V?ref_=wl_share" target="_blank">
+        <span class="icon">A</span>
+        <span>Amazon</span>
+    </a>
+
+    <a href="https://fusetter.com/u/halfgreen208" target="_blank">
+        <span class="icon">F</span>
+        <span>fusetter</span>
+    </a>
+
+</div>
+
+</body>
+</html>
