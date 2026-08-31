@@ -32,13 +32,13 @@ body {
   font-size: 1em;
   text-decoration: none;
 
-  padding: .7em 1.5em;
+  padding: .9em 2em;
 
   cursor: pointer;
 
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
 
   vertical-align: middle;
 
@@ -49,28 +49,6 @@ body {
   overflow: hidden;
 
   transition: all 700ms ease;
-}
-
-.c-button__icon {
-  width: 40px;
-  height: 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #06c8d9;
-  border-radius: 50%;
-
-  background: #fff;
-
-  font-size: 15px;
-  font-weight: bold;
-
-  position: relative;
-  z-index: 1;
-
-  transition: all 300ms ease;
 }
 
 .c-button__text {
@@ -127,13 +105,6 @@ body {
   color: #fff;
 }
 
-.c-button:hover .c-button__icon {
-  background: #06c8d9;
-  color: #fff;
-  border-color: #fff;
-  transform: translateY(-2px);
-}
-
 .c-button:hover .c-button__blobs div {
   transform: scale(1.4) translateY(0) translateZ(0);
 }
@@ -161,7 +132,6 @@ body {
     rel="noopener noreferrer"
     class="c-button"
   >
-    <span class="c-button__icon">𝕏</span>
     <span class="c-button__text">X</span>
 
     <div class="c-button__blobs">
@@ -179,7 +149,6 @@ body {
     rel="noopener noreferrer"
     class="c-button"
   >
-    <span class="c-button__icon">▶</span>
     <span class="c-button__text">YouTube</span>
 
     <div class="c-button__blobs">
@@ -197,7 +166,6 @@ body {
     rel="noopener noreferrer"
     class="c-button"
   >
-    <span class="c-button__icon">A</span>
     <span class="c-button__text">Amazon</span>
 
     <div class="c-button__blobs">
@@ -215,7 +183,6 @@ body {
     rel="noopener noreferrer"
     class="c-button"
   >
-    <span class="c-button__icon">F</span>
     <span class="c-button__text">fusetter</span>
 
     <div class="c-button__blobs">
