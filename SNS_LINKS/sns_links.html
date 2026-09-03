@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNS Links</title>
+
+  <style>
+    .sns-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .sns-link {
+      width: 48px;
+      height: 48px;
+      border: 1px solid #999;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .sns-link:hover {
+      opacity: 0.7;
+      transform: translateY(-2px);
+    }
+
+    .sns-link img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="sns-links" aria-label="SNS links" id="sns-links"></nav>
+
+  <script>
+    /* =========================================================
+       ★★★ リンク先・アイコンを変更するときはここだけ編集 ★★★
+       ========================================================= */
+    const SNS_LINKS = [
+      { name: "X", url: "https://x.com/", icon: "pic/x.png" },
+      { name: "YouTube", url: "https://youtube.com/", icon: "pic/youtube.png" },
+      { name: "Amazon", url: "https://amazon.co.jp/", icon: "pic/amazon.png" },
+      { name: "Fusetter", url: "https://fusetter.com/", icon: "pic/fusetter.png" },
+      { name: "Discord", url: "https://discord.com/", icon: "pic/discord.png" }
+    ];
+    /* ========================================================= */
+
+    const container = document.getElementById("sns-links");
+
+    SNS_LINKS.forEach(({ name, url, icon }) => {
+      const link = document.createElement("a");
+
+      link.className = "sns-link";
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.setAttribute("aria-label", name);
+
+      const image = document.createElement("img");
+      image.src = icon;
+      image.alt = "";
+
+      link.appendChild(image);
+      container.appendChild(link);
+    });
+  </script>
+
+</body>
+</html>
