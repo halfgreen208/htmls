@@ -11,17 +11,22 @@
       justify-content: center;
       align-items: center;
       gap: 16px;
+      flex-wrap: wrap;
     }
 
     .sns-link {
       width: 48px;
-      height: 48px;
+      aspect-ratio: 1 / 1;
+      flex-shrink: 0;
+
       border: 1px solid #999;
       border-radius: 50%;
+
       display: flex;
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
+
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
@@ -32,7 +37,8 @@
 
     .sns-link img {
       width: 32px;
-      height: 32px;
+      aspect-ratio: 1 / 1;
+      height: auto;
       object-fit: contain;
       display: block;
     }
@@ -48,11 +54,11 @@
        ★★★ リンク先・アイコンを変更するときはここだけ編集 ★★★
        ========================================================= */
     const SNS_LINKS = [
-      { name: "X", url: "https://x.com/", icon: "pic/x.png" },
-      { name: "YouTube", url: "https://youtube.com/", icon: "pic/youtube.png" },
-      { name: "Amazon", url: "https://amazon.co.jp/", icon: "pic/amazon.png" },
+      { name: "X",        url: "https://x.com/",         icon: "pic/x.png" },
+      { name: "YouTube",  url: "https://youtube.com/",  icon: "pic/youtube.png" },
+      { name: "Amazon",   url: "https://amazon.co.jp/", icon: "pic/amazon.png" },
       { name: "Fusetter", url: "https://fusetter.com/", icon: "pic/fusetter.png" },
-      { name: "Discord", url: "https://discord.com/", icon: "pic/discord.png" }
+      { name: "Discord",  url: "https://discord.com/",  icon: "pic/discord.png" }
     ];
     /* ========================================================= */
 
